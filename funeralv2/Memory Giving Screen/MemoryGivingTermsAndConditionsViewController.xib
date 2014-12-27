@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemoryGivingTermsAndConditionsViewController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController.navigationBarHidden" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="backButton" destination="Dyp-6F-ROr" id="VbY-Ag-NGL"/>
+                <outlet property="backgroundImageView" destination="wCG-7X-y0p" id="kUd-ns-vyv"/>
+                <outlet property="descriptionTextView" destination="EPX-mv-F9Q" id="mH2-6o-pWw"/>
+                <outlet property="titleLabel" destination="KEM-2T-X9D" id="1aM-67-YG2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wCG-7X-y0p">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYQ-Ob-Oa1">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyp-6F-ROr">
+                            <rect key="frame" x="0.0" y="20" width="67" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="67" id="792-Ct-Srw"/>
+                                <constraint firstAttribute="height" constant="40" id="EIT-nh-nzC"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="20" minY="9" maxX="35" maxY="10"/>
+                            <state key="normal" image="navigation-back-button.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="OxV-yT-eQe"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEM-2T-X9D">
+                            <rect key="frame" x="48" y="30" width="225" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" priority="999" constant="225" id="BR4-jf-x3l"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="KEM-2T-X9D" firstAttribute="leading" secondItem="yYQ-Ob-Oa1" secondAttribute="leading" constant="48" id="3tc-36-Sri"/>
+                        <constraint firstItem="Dyp-6F-ROr" firstAttribute="leading" secondItem="yYQ-Ob-Oa1" secondAttribute="leading" id="8fd-OZ-J6B"/>
+                        <constraint firstAttribute="trailing" secondItem="Dyp-6F-ROr" secondAttribute="trailing" constant="253" id="9bt-x0-sQs"/>
+                        <constraint firstAttribute="trailing" secondItem="KEM-2T-X9D" secondAttribute="trailing" constant="47" id="CP2-DN-HOD"/>
+                        <constraint firstAttribute="bottom" secondItem="KEM-2T-X9D" secondAttribute="bottom" constant="12" id="R9Q-xp-2dc"/>
+                        <constraint firstItem="Dyp-6F-ROr" firstAttribute="top" secondItem="yYQ-Ob-Oa1" secondAttribute="top" constant="20" id="SxP-7m-A1Y"/>
+                        <constraint firstItem="KEM-2T-X9D" firstAttribute="top" secondItem="yYQ-Ob-Oa1" secondAttribute="top" constant="30" id="iD7-xg-WJD"/>
+                        <constraint firstAttribute="bottom" secondItem="Dyp-6F-ROr" secondAttribute="bottom" constant="4" id="mcc-Y1-p81"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIk-d5-bRt">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPX-mv-F9Q">
+                    <rect key="frame" x="20" y="84" width="280" height="476"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fIk-d5-bRt" secondAttribute="bottom" id="01L-LU-wy3"/>
+                <constraint firstItem="EPX-mv-F9Q" firstAttribute="trailing" secondItem="yYQ-Ob-Oa1" secondAttribute="trailing" constant="-20" id="1VC-ra-J3g"/>
+                <constraint firstItem="EPX-mv-F9Q" firstAttribute="top" secondItem="yYQ-Ob-Oa1" secondAttribute="bottom" constant="20" id="2yF-7f-pyq"/>
+                <constraint firstItem="EPX-mv-F9Q" firstAttribute="trailing" secondItem="wCG-7X-y0p" secondAttribute="trailing" constant="-20" id="7de-yB-n7o"/>
+                <constraint firstItem="yYQ-Ob-Oa1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8NB-Me-7LO"/>
+                <constraint firstItem="EPX-mv-F9Q" firstAttribute="leading" secondItem="yYQ-Ob-Oa1" secondAttribute="leading" constant="20" id="8lL-BF-GjG"/>
+                <constraint firstItem="fIk-d5-bRt" firstAttribute="bottom" secondItem="wCG-7X-y0p" secondAttribute="bottom" id="BX2-cy-hcA"/>
+                <constraint firstItem="fIk-d5-bRt" firstAttribute="leading" secondItem="wCG-7X-y0p" secondAttribute="leading" id="E38-iC-LWq"/>
+                <constraint firstItem="fIk-d5-bRt" firstAttribute="top" secondItem="yYQ-Ob-Oa1" secondAttribute="bottom" id="END-MN-qHM"/>
+                <constraint firstAttribute="bottom" secondItem="EPX-mv-F9Q" secondAttribute="bottom" constant="8" id="Lxy-Yo-zez"/>
+                <constraint firstItem="EPX-mv-F9Q" firstAttribute="top" secondItem="yYQ-Ob-Oa1" secondAttribute="bottom" constant="20" id="bxB-Ce-wXY"/>
+                <constraint firstItem="wCG-7X-y0p" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eGL-6y-KON"/>
+                <constraint firstItem="fIk-d5-bRt" firstAttribute="trailing" secondItem="yYQ-Ob-Oa1" secondAttribute="trailing" id="eeW-ee-Ubg"/>
+                <constraint firstItem="EPX-mv-F9Q" firstAttribute="top" secondItem="yYQ-Ob-Oa1" secondAttribute="bottom" constant="20" id="hKx-s9-KqM"/>
+                <constraint firstItem="wCG-7X-y0p" firstAttribute="top" secondItem="yYQ-Ob-Oa1" secondAttribute="top" id="jFI-4L-Pnt"/>
+                <constraint firstItem="EPX-mv-F9Q" firstAttribute="top" secondItem="yYQ-Ob-Oa1" secondAttribute="bottom" constant="20" id="l00-Br-c30"/>
+                <constraint firstItem="fIk-d5-bRt" firstAttribute="centerY" secondItem="EPX-mv-F9Q" secondAttribute="centerY" constant="-6" id="ntz-fW-7Wv"/>
+                <constraint firstItem="EPX-mv-F9Q" firstAttribute="leading" secondItem="wCG-7X-y0p" secondAttribute="leading" constant="20" id="omp-Zm-byF"/>
+                <constraint firstItem="EPX-mv-F9Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="qhY-yJ-qGM"/>
+                <constraint firstAttribute="trailing" secondItem="EPX-mv-F9Q" secondAttribute="trailing" constant="20" id="y0A-dS-5IP"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="navigation-back-button.png" width="24" height="42"/>
+    </resources>
+</document>

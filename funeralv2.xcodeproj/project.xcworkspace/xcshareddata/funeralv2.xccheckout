@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>72EBCA10-A03B-4F3F-B6A6-D0E8950CC351</string>
+	<key>IDESourceControlProjectName</key>
+	<string>funeralv2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ba60775e-0ab2-4a4a-b400-42328d942c3f++505</key>
+		<string>https://appitized.svn.beanstalkapp.com/funeral-v2/trunk</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>funeralv2/funeralv2.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ba60775e-0ab2-4a4a-b400-42328d942c3f++505</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>ba60775e-0ab2-4a4a-b400-42328d942c3f++505</key>
+		<string>https://appitized.svn.beanstalkapp.com/funeral-v2</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://appitized.svn.beanstalkapp.com/funeral-v2/trunk/funeralv2/funeralv2.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ba60775e-0ab2-4a4a-b400-42328d942c3f++505</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ba60775e-0ab2-4a4a-b400-42328d942c3f++505</string>
+			<key>IDESourceControlWCCName</key>
+			<string>funeral-v2</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemoryGivingDonationSearchFormViewController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController.navigationBarHidden" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="activityIndicator" destination="gcr-z8-QMX" id="6c2-My-la7"/>
+                <outlet property="backButton" destination="ePT-SP-6DQ" id="3HB-yf-i2H"/>
+                <outlet property="backgroundImageView" destination="6nf-Ol-6Ln" id="0dk-fY-FNs"/>
+                <outlet property="charityTextField" destination="Jal-s6-Z3P" id="QI5-Mq-Xk5"/>
+                <outlet property="funeralDirectorTextField" destination="SeS-HA-u5J" id="otJ-69-4eI"/>
+                <outlet property="nameTextField" destination="Dpl-dy-Zvq" id="SFf-pD-GvS"/>
+                <outlet property="titleLabel" destination="uRT-F4-wBx" id="MFq-ec-YGQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memory-giving-donation-search-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="6nf-Ol-6Ln">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVe-2b-V3F">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make A Donation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRT-F4-wBx">
+                            <rect key="frame" x="48" y="30" width="225" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePT-SP-6DQ">
+                            <rect key="frame" x="0.0" y="21" width="67" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="67" id="Gjy-oz-ScW"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="20" minY="9" maxX="35" maxY="10"/>
+                            <state key="normal" image="navigation-back-button.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="YWw-JD-62l"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="uRT-F4-wBx" firstAttribute="centerY" secondItem="ePT-SP-6DQ" secondAttribute="centerY" id="1Zp-Ym-Ya2"/>
+                        <constraint firstAttribute="bottom" secondItem="ePT-SP-6DQ" secondAttribute="bottom" constant="3" id="5Bc-8B-efU"/>
+                        <constraint firstItem="ePT-SP-6DQ" firstAttribute="leading" secondItem="pVe-2b-V3F" secondAttribute="leading" id="L3F-J1-vhu"/>
+                        <constraint firstItem="uRT-F4-wBx" firstAttribute="leading" secondItem="pVe-2b-V3F" secondAttribute="leading" constant="48" id="NM2-Bp-yrn"/>
+                        <constraint firstItem="uRT-F4-wBx" firstAttribute="centerX" secondItem="pVe-2b-V3F" secondAttribute="centerX" id="e0q-NG-sZR"/>
+                        <constraint firstItem="ePT-SP-6DQ" firstAttribute="top" secondItem="pVe-2b-V3F" secondAttribute="top" constant="21" id="oGG-bA-yuw"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uy-Bt-XDr">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memory-giving-donation-search-background.png" translatesAutoresizingMaskIntoConstraints="NO" id="lr0-5A-JVM">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w76-ts-V20">
+                            <rect key="frame" x="20" y="-3" width="280" height="133"/>
+                            <string key="text">Memory giving lets you make an  on-line donation in memory of a loved  one. To find the fund page to make  your donation please search below.</string>
+                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18.5"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontSizeToFitWidth" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <view tag="-12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkF-TQ-2AJ">
+                            <rect key="frame" x="0.0" y="174" width="320" height="262"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oH9-rW-KVT">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memory-giving-donation-search-name-of-deceased-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="w4h-oP-kUH">
+                                            <rect key="frame" x="25" y="19" width="27" height="20"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name of deceased" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en9-Me-qxN">
+                                            <rect key="frame" x="68" y="19" width="252" height="20"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15.5"/>
+                                            <color key="textColor" red="0.54901960780000003" green="0.70588235290000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AbF-oH-Uj5">
+                                            <rect key="frame" x="68" y="72" width="252" height="1"/>
+                                            <color key="backgroundColor" red="0.1215686275" green="0.20000000000000001" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dpl-dy-Zvq">
+                                            <rect key="frame" x="68" y="43" width="252" height="30"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="shouldHideTitle" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="g0D-A2-tKZ"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="w4h-oP-kUH" firstAttribute="top" secondItem="oH9-rW-KVT" secondAttribute="top" constant="19" id="79U-TE-27s"/>
+                                        <constraint firstItem="AbF-oH-Uj5" firstAttribute="top" secondItem="en9-Me-qxN" secondAttribute="bottom" constant="33" id="7ER-n2-pyY"/>
+                                        <constraint firstItem="en9-Me-qxN" firstAttribute="top" secondItem="w4h-oP-kUH" secondAttribute="top" id="Eu0-Ae-caq"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dpl-dy-Zvq" secondAttribute="trailing" id="GLg-10-XGG"/>
+                                        <constraint firstAttribute="bottom" secondItem="Dpl-dy-Zvq" secondAttribute="bottom" id="LA9-Hi-uA2"/>
+                                        <constraint firstItem="Dpl-dy-Zvq" firstAttribute="leading" secondItem="en9-Me-qxN" secondAttribute="leading" id="NEa-NS-ryy"/>
+                                        <constraint firstItem="Dpl-dy-Zvq" firstAttribute="leading" secondItem="oH9-rW-KVT" secondAttribute="leading" constant="68" id="QYA-jH-IHr"/>
+                                        <constraint firstItem="Dpl-dy-Zvq" firstAttribute="top" secondItem="en9-Me-qxN" secondAttribute="bottom" constant="4" id="Sit-h8-TxG"/>
+                                        <constraint firstItem="Dpl-dy-Zvq" firstAttribute="leading" secondItem="AbF-oH-Uj5" secondAttribute="leading" id="ahu-f8-5wo"/>
+                                        <constraint firstItem="AbF-oH-Uj5" firstAttribute="trailing" secondItem="Dpl-dy-Zvq" secondAttribute="trailing" id="cyd-kT-eRx"/>
+                                        <constraint firstItem="en9-Me-qxN" firstAttribute="leading" secondItem="w4h-oP-kUH" secondAttribute="trailing" constant="16" id="d4R-t5-ifl"/>
+                                        <constraint firstItem="w4h-oP-kUH" firstAttribute="leading" secondItem="oH9-rW-KVT" secondAttribute="leading" constant="25" id="gNI-BL-dqO"/>
+                                        <constraint firstItem="en9-Me-qxN" firstAttribute="bottom" secondItem="w4h-oP-kUH" secondAttribute="bottom" id="gXG-i8-DKL"/>
+                                        <constraint firstItem="Dpl-dy-Zvq" firstAttribute="bottom" secondItem="AbF-oH-Uj5" secondAttribute="bottom" id="svg-NK-04V"/>
+                                        <constraint firstAttribute="bottom" secondItem="w4h-oP-kUH" secondAttribute="bottom" constant="34" id="wxg-LO-xpg"/>
+                                        <constraint firstItem="en9-Me-qxN" firstAttribute="trailing" secondItem="Dpl-dy-Zvq" secondAttribute="trailing" id="yrI-RJ-uNt"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jdg-vw-dUh">
+                                    <rect key="frame" x="0.0" y="83" width="320" height="73"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memory-giving-donation-search-funeral-director-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="X8B-Uu-ynp">
+                                            <rect key="frame" x="25" y="19" width="27" height="20"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="funeral director" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJR-C2-XaH">
+                                            <rect key="frame" x="68" y="19" width="252" height="20"/>
+                                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15.5"/>
+                                            <color key="textColor" red="0.54901960780000003" green="0.70588235290000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKV-py-M3D">
+                                            <rect key="frame" x="68" y="72" width="252" height="1"/>
+                                            <color key="backgroundColor" red="0.1215686275" green="0.20000000000000001" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="-2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Funeral Director" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SeS-HA-u5J">
+                                            <rect key="frame" x="68" y="43" width="252" height="30"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="shouldHideTitle" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="TcQ-PW-jui"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="X8B-Uu-ynp" secondAttribute="bottom" constant="34" id="2bD-K8-jXq"/>
+                                        <constraint firstItem="X8B-Uu-ynp" firstAttribute="top" secondItem="Jdg-vw-dUh" secondAttribute="top" constant="19" id="2iU-23-4HE"/>
+                                        <constraint firstItem="SeS-HA-u5J" firstAttribute="top" secondItem="UJR-C2-XaH" secondAttribute="bottom" constant="4" id="3FR-tV-DCZ"/>
+                                        <constraint firstItem="UJR-C2-XaH" firstAttribute="trailing" secondItem="SeS-HA-u5J" secondAttribute="trailing" id="5V6-36-oyv"/>
+                                        <constraint firstAttribute="bottom" secondItem="iKV-py-M3D" secondAttribute="bottom" id="71p-sw-blZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="iKV-py-M3D" secondAttribute="trailing" id="BNc-Xp-wxx"/>
+                                        <constraint firstItem="X8B-Uu-ynp" firstAttribute="leading" secondItem="Jdg-vw-dUh" secondAttribute="leading" constant="25" id="Foe-YE-h5g"/>
+                                        <constraint firstItem="iKV-py-M3D" firstAttribute="top" secondItem="UJR-C2-XaH" secondAttribute="bottom" constant="33" id="RdH-S4-Xkn"/>
+                                        <constraint firstItem="iKV-py-M3D" firstAttribute="bottom" secondItem="SeS-HA-u5J" secondAttribute="bottom" id="SpF-68-jGv"/>
+                                        <constraint firstItem="SeS-HA-u5J" firstAttribute="trailing" secondItem="iKV-py-M3D" secondAttribute="trailing" id="VoR-qW-SSD"/>
+                                        <constraint firstItem="X8B-Uu-ynp" firstAttribute="bottom" secondItem="UJR-C2-XaH" secondAttribute="bottom" id="Wo8-yN-cHa"/>
+                                        <constraint firstItem="SeS-HA-u5J" firstAttribute="leading" secondItem="Jdg-vw-dUh" secondAttribute="leading" constant="68" id="a5k-hY-v6N"/>
+                                        <constraint firstItem="X8B-Uu-ynp" firstAttribute="top" secondItem="UJR-C2-XaH" secondAttribute="top" id="aB7-Ac-S4M"/>
+                                        <constraint firstItem="UJR-C2-XaH" firstAttribute="leading" secondItem="SeS-HA-u5J" secondAttribute="leading" id="gdk-Nk-Rvu"/>
+                                        <constraint firstItem="UJR-C2-XaH" firstAttribute="leading" secondItem="X8B-Uu-ynp" secondAttribute="trailing" constant="16" id="ozH-7N-Qvw"/>
+                                        <constraint firstItem="SeS-HA-u5J" firstAttribute="leading" secondItem="iKV-py-M3D" secondAttribute="leading" id="zHV-dI-aee"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qe2-Jd-KgN">
+                                    <rect key="frame" x="0.0" y="166" width="320" height="73"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memory-giving-donation-search-charity-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="pAn-2v-4xO">
+                                            <rect key="frame" x="25" y="19" width="27" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="27" id="XHA-hD-WBq"/>
+                                                <constraint firstAttribute="height" constant="20" id="bGB-05-lTq"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="charity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1B-9d-n33">
+                                            <rect key="frame" x="68" y="19" width="252" height="20"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15.5"/>
+                                            <color key="textColor" red="0.54901960780000003" green="0.70588235290000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IqU-w5-6EP">
+                                            <rect key="frame" x="68" y="72" width="252" height="1"/>
+                                            <color key="backgroundColor" red="0.12156862745098039" green="0.20000000000000001" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="-3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Charity Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jal-s6-Z3P">
+                                            <rect key="frame" x="68" y="43" width="252" height="30"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="shouldHideTitle" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="4tL-M7-nm7"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="IqU-w5-6EP" firstAttribute="trailing" secondItem="Jal-s6-Z3P" secondAttribute="trailing" id="0kz-X6-sSm"/>
+                                        <constraint firstItem="Jal-s6-Z3P" firstAttribute="top" secondItem="R1B-9d-n33" secondAttribute="bottom" constant="4" id="FV6-Uv-40k"/>
+                                        <constraint firstItem="Jal-s6-Z3P" firstAttribute="trailing" secondItem="R1B-9d-n33" secondAttribute="trailing" id="G5X-we-8S6"/>
+                                        <constraint firstItem="R1B-9d-n33" firstAttribute="leading" secondItem="pAn-2v-4xO" secondAttribute="trailing" constant="16" id="JIW-An-3F1"/>
+                                        <constraint firstItem="R1B-9d-n33" firstAttribute="top" secondItem="pAn-2v-4xO" secondAttribute="top" id="JTo-Cl-poO"/>
+                                        <constraint firstAttribute="trailing" secondItem="IqU-w5-6EP" secondAttribute="trailing" id="L3V-Q9-GRl"/>
+                                        <constraint firstItem="Jal-s6-Z3P" firstAttribute="leading" secondItem="IqU-w5-6EP" secondAttribute="leading" id="Nu4-LB-zSg"/>
+                                        <constraint firstItem="Jal-s6-Z3P" firstAttribute="leading" secondItem="qe2-Jd-KgN" secondAttribute="leading" constant="68" id="PvE-Ua-3NX"/>
+                                        <constraint firstItem="pAn-2v-4xO" firstAttribute="leading" secondItem="qe2-Jd-KgN" secondAttribute="leading" constant="25" id="V8S-wN-rYj"/>
+                                        <constraint firstItem="IqU-w5-6EP" firstAttribute="top" secondItem="R1B-9d-n33" secondAttribute="bottom" constant="33" id="YH3-1Y-MvA"/>
+                                        <constraint firstItem="pAn-2v-4xO" firstAttribute="top" secondItem="qe2-Jd-KgN" secondAttribute="top" constant="19" id="c4z-xB-0ao"/>
+                                        <constraint firstItem="R1B-9d-n33" firstAttribute="leading" secondItem="Jal-s6-Z3P" secondAttribute="leading" id="kHb-cU-1gx"/>
+                                        <constraint firstItem="R1B-9d-n33" firstAttribute="bottom" secondItem="pAn-2v-4xO" secondAttribute="bottom" id="kjF-ef-e5H"/>
+                                        <constraint firstAttribute="bottom" secondItem="pAn-2v-4xO" secondAttribute="bottom" constant="34" id="lfB-4k-yh3"/>
+                                        <constraint firstItem="Jal-s6-Z3P" firstAttribute="bottom" secondItem="IqU-w5-6EP" secondAttribute="bottom" id="meI-1S-BQR"/>
+                                        <constraint firstAttribute="bottom" secondItem="Jal-s6-Z3P" secondAttribute="bottom" id="skk-rN-rVp"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Jdg-vw-dUh" secondAttribute="trailing" id="Hgv-eL-bLe"/>
+                                <constraint firstItem="Jdg-vw-dUh" firstAttribute="leading" secondItem="oH9-rW-KVT" secondAttribute="leading" id="JJZ-vi-lGj"/>
+                                <constraint firstItem="Jdg-vw-dUh" firstAttribute="top" secondItem="fkF-TQ-2AJ" secondAttribute="top" constant="83" id="OU4-CL-GF5"/>
+                                <constraint firstItem="oH9-rW-KVT" firstAttribute="top" secondItem="fkF-TQ-2AJ" secondAttribute="top" id="fH3-jb-ddf"/>
+                                <constraint firstItem="Jdg-vw-dUh" firstAttribute="trailing" secondItem="qe2-Jd-KgN" secondAttribute="trailing" id="g2L-7w-Drd"/>
+                                <constraint firstItem="Jdg-vw-dUh" firstAttribute="leading" secondItem="fkF-TQ-2AJ" secondAttribute="leading" id="jLp-JF-Jvg"/>
+                                <constraint firstItem="Jdg-vw-dUh" firstAttribute="trailing" secondItem="oH9-rW-KVT" secondAttribute="trailing" id="m1f-Xn-tK9"/>
+                                <constraint firstAttribute="bottom" secondItem="qe2-Jd-KgN" secondAttribute="bottom" constant="23" id="qTe-5Q-7W2"/>
+                                <constraint firstItem="Jdg-vw-dUh" firstAttribute="top" secondItem="oH9-rW-KVT" secondAttribute="bottom" constant="10" id="tJ3-YV-4Q8"/>
+                                <constraint firstItem="Jdg-vw-dUh" firstAttribute="leading" secondItem="qe2-Jd-KgN" secondAttribute="leading" id="tya-5z-4tl"/>
+                                <constraint firstItem="qe2-Jd-KgN" firstAttribute="top" secondItem="fkF-TQ-2AJ" secondAttribute="top" constant="166" id="uvC-l4-SpD"/>
+                                <constraint firstItem="qe2-Jd-KgN" firstAttribute="top" secondItem="Jdg-vw-dUh" secondAttribute="bottom" constant="10" id="z59-6u-dYr"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="-13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vm-tv-xbM">
+                            <rect key="frame" x="25" y="441" width="270" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15.5"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="175" maxY="0.0"/>
+                            <state key="normal" title="Search" backgroundImage="memory-giving-donation-search-bar-icon.png">
+                                <color key="titleColor" red="0.48627450979999998" green="0.54117647059999996" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="searchButtonPressed:" destination="-1" eventType="touchUpInside" id="lgg-Ta-wuz"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" tag="-14" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memory-giving-donation-search-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="yRm-6G-9Mk">
+                            <rect key="frame" x="114" y="454" width="15" height="15"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="FPZ-Co-6As"/>
+                                <constraint firstAttribute="width" constant="15" id="TTt-Hs-WcW"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="6vm-tv-xbM" secondAttribute="bottom" constant="23" id="0Wr-Jv-2Dl"/>
+                        <constraint firstItem="6vm-tv-xbM" firstAttribute="centerX" secondItem="fkF-TQ-2AJ" secondAttribute="centerX" id="6Le-rN-chp"/>
+                        <constraint firstItem="6vm-tv-xbM" firstAttribute="leading" secondItem="5uy-Bt-XDr" secondAttribute="leading" constant="25" id="BfA-UB-01b"/>
+                        <constraint firstItem="lr0-5A-JVM" firstAttribute="leading" secondItem="5uy-Bt-XDr" secondAttribute="leading" id="CNz-9N-v4M"/>
+                        <constraint firstItem="w76-ts-V20" firstAttribute="centerX" secondItem="lr0-5A-JVM" secondAttribute="centerX" id="OXn-Ja-T2u"/>
+                        <constraint firstItem="yRm-6G-9Mk" firstAttribute="leading" secondItem="5uy-Bt-XDr" secondAttribute="leading" constant="114" id="W3o-fn-Mne"/>
+                        <constraint firstItem="w76-ts-V20" firstAttribute="leading" secondItem="5uy-Bt-XDr" secondAttribute="leading" constant="20" id="YLu-dB-smx"/>
+                        <constraint firstAttribute="trailing" secondItem="lr0-5A-JVM" secondAttribute="trailing" id="cn0-Ou-Pzj"/>
+                        <constraint firstItem="yRm-6G-9Mk" firstAttribute="top" secondItem="fkF-TQ-2AJ" secondAttribute="bottom" constant="18" id="eyI-4a-Qau"/>
+                        <constraint firstItem="lr0-5A-JVM" firstAttribute="top" secondItem="w76-ts-V20" secondAttribute="top" constant="3" id="gsO-VC-f0C"/>
+                        <constraint firstItem="fkF-TQ-2AJ" firstAttribute="top" secondItem="lr0-5A-JVM" secondAttribute="bottom" constant="4" id="ibd-Bm-S1X"/>
+                        <constraint firstItem="fkF-TQ-2AJ" firstAttribute="leading" secondItem="lr0-5A-JVM" secondAttribute="leading" id="j7p-ZI-jEM"/>
+                        <constraint firstItem="lr0-5A-JVM" firstAttribute="top" secondItem="5uy-Bt-XDr" secondAttribute="top" id="nUC-9I-id2"/>
+                        <constraint firstItem="yRm-6G-9Mk" firstAttribute="centerY" secondItem="6vm-tv-xbM" secondAttribute="centerY" id="rUC-0M-adG"/>
+                        <constraint firstItem="fkF-TQ-2AJ" firstAttribute="trailing" secondItem="lr0-5A-JVM" secondAttribute="trailing" id="vbR-JE-6Qd"/>
+                        <constraint firstItem="6vm-tv-xbM" firstAttribute="top" secondItem="fkF-TQ-2AJ" secondAttribute="bottom" constant="5" id="xbo-DO-c8X"/>
+                        <constraint firstItem="fkF-TQ-2AJ" firstAttribute="top" secondItem="w76-ts-V20" secondAttribute="bottom" constant="44" id="xkq-9q-Tjz"/>
+                    </constraints>
+                    <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-z8-QMX">
+                    <rect key="frame" x="151" y="305" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="pVe-2b-V3F" firstAttribute="trailing" secondItem="6nf-Ol-6Ln" secondAttribute="trailing" id="32f-wX-bTm"/>
+                <constraint firstItem="5uy-Bt-XDr" firstAttribute="leading" secondItem="6nf-Ol-6Ln" secondAttribute="leading" id="4lg-Ov-xAg"/>
+                <constraint firstAttribute="bottom" secondItem="gcr-z8-QMX" secondAttribute="bottom" constant="243" id="6c5-vg-UDn"/>
+                <constraint firstAttribute="trailing" secondItem="pVe-2b-V3F" secondAttribute="trailing" id="M1b-VW-5VN"/>
+                <constraint firstItem="5uy-Bt-XDr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QjF-fK-wy6"/>
+                <constraint firstAttribute="bottom" secondItem="6nf-Ol-6Ln" secondAttribute="bottom" id="Y4c-5j-ojs"/>
+                <constraint firstItem="5uy-Bt-XDr" firstAttribute="top" secondItem="pVe-2b-V3F" secondAttribute="bottom" id="aJa-BH-tdQ"/>
+                <constraint firstItem="6nf-Ol-6Ln" firstAttribute="trailing" secondItem="5uy-Bt-XDr" secondAttribute="trailing" id="cEC-g7-est"/>
+                <constraint firstItem="6nf-Ol-6Ln" firstAttribute="top" secondItem="pVe-2b-V3F" secondAttribute="top" id="gDn-sM-0cu"/>
+                <constraint firstItem="6nf-Ol-6Ln" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hkk-Dh-Q6w"/>
+                <constraint firstItem="5uy-Bt-XDr" firstAttribute="leading" secondItem="pVe-2b-V3F" secondAttribute="leading" id="mhZ-wO-yi3"/>
+                <constraint firstItem="gcr-z8-QMX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="151" id="sId-pY-r6w"/>
+                <constraint firstItem="5uy-Bt-XDr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="uqA-mF-CFS"/>
+                <constraint firstItem="6nf-Ol-6Ln" firstAttribute="bottom" secondItem="5uy-Bt-XDr" secondAttribute="bottom" id="ze5-73-JS4"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="420" y="449"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="memory-giving-donation-search-background.png" width="640" height="348"/>
+        <image name="memory-giving-donation-search-bar-icon.png" width="540" height="80"/>
+        <image name="memory-giving-donation-search-charity-icon.png" width="55" height="40"/>
+        <image name="memory-giving-donation-search-funeral-director-icon.png" width="55" height="40"/>
+        <image name="memory-giving-donation-search-icon.png" width="31" height="31"/>
+        <image name="memory-giving-donation-search-name-of-deceased-icon.png" width="55" height="40"/>
+        <image name="navigation-back-button.png" width="24" height="42"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

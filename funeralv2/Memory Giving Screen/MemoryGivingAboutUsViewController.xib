@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemoryGivingAboutUsViewController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController.navigationBarHidden" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="backButton" destination="zKK-8b-IBX" id="vhQ-7u-PLR"/>
+                <outlet property="backgroundImageView" destination="cAm-ft-Jom" id="BXP-Ti-d1B"/>
+                <outlet property="descriptionTextView" destination="Lgv-db-Hca" id="8is-I7-upZ"/>
+                <outlet property="titleLabel" destination="xex-UM-DFI" id="6bf-F3-CSo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cAm-ft-Jom">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7or-6Q-P3c">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKK-8b-IBX">
+                            <rect key="frame" x="0.0" y="20" width="67" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Kfi-aL-mpq"/>
+                                <constraint firstAttribute="width" constant="67" id="yUB-Km-9S4"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="20" minY="9" maxX="35" maxY="10"/>
+                            <state key="normal" image="navigation-back-button.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="SWj-7l-MXF"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xex-UM-DFI">
+                            <rect key="frame" x="48" y="30" width="225" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" priority="999" constant="225" id="1iy-1w-9ah"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="zKK-8b-IBX" firstAttribute="leading" secondItem="7or-6Q-P3c" secondAttribute="leading" id="5HD-SS-Hi8"/>
+                        <constraint firstAttribute="trailing" secondItem="xex-UM-DFI" secondAttribute="trailing" constant="47" id="67f-Zg-Khd"/>
+                        <constraint firstItem="xex-UM-DFI" firstAttribute="leading" secondItem="7or-6Q-P3c" secondAttribute="leading" constant="48" id="NCq-jd-JxP"/>
+                        <constraint firstAttribute="bottom" secondItem="xex-UM-DFI" secondAttribute="bottom" constant="12" id="UGI-jW-acr"/>
+                        <constraint firstItem="zKK-8b-IBX" firstAttribute="top" secondItem="7or-6Q-P3c" secondAttribute="top" constant="20" id="Wf4-T8-zV0"/>
+                        <constraint firstAttribute="bottom" secondItem="zKK-8b-IBX" secondAttribute="bottom" constant="4" id="YRP-C3-U61"/>
+                        <constraint firstAttribute="trailing" secondItem="zKK-8b-IBX" secondAttribute="trailing" constant="253" id="cSW-Ik-0ay"/>
+                        <constraint firstItem="xex-UM-DFI" firstAttribute="top" secondItem="7or-6Q-P3c" secondAttribute="top" constant="30" id="mlU-kl-yEp"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNW-DU-exU">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgv-db-Hca">
+                    <rect key="frame" x="20" y="84" width="280" height="476"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cAm-ft-Jom" secondAttribute="trailing" id="95K-KN-jgG"/>
+                <constraint firstItem="Lgv-db-Hca" firstAttribute="trailing" secondItem="cAm-ft-Jom" secondAttribute="trailing" constant="-20" id="9OC-En-K5j"/>
+                <constraint firstItem="cAm-ft-Jom" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9qF-Xi-x9R"/>
+                <constraint firstItem="Lgv-db-Hca" firstAttribute="leading" secondItem="7or-6Q-P3c" secondAttribute="leading" constant="20" id="AbW-dm-dEf"/>
+                <constraint firstItem="FNW-DU-exU" firstAttribute="trailing" secondItem="7or-6Q-P3c" secondAttribute="trailing" id="BGt-KU-9GV"/>
+                <constraint firstItem="cAm-ft-Jom" firstAttribute="top" secondItem="7or-6Q-P3c" secondAttribute="top" id="CPD-lj-wCL"/>
+                <constraint firstAttribute="bottom" secondItem="FNW-DU-exU" secondAttribute="bottom" id="DJ5-td-qS8"/>
+                <constraint firstItem="Lgv-db-Hca" firstAttribute="leading" secondItem="cAm-ft-Jom" secondAttribute="leading" constant="20" id="Mhz-xM-L6L"/>
+                <constraint firstItem="FNW-DU-exU" firstAttribute="leading" secondItem="cAm-ft-Jom" secondAttribute="leading" id="NoS-Vv-gKf"/>
+                <constraint firstItem="Lgv-db-Hca" firstAttribute="top" secondItem="7or-6Q-P3c" secondAttribute="bottom" constant="20" id="WUz-7F-yxy"/>
+                <constraint firstItem="FNW-DU-exU" firstAttribute="centerY" secondItem="Lgv-db-Hca" secondAttribute="centerY" constant="-6" id="XZY-RF-hd7"/>
+                <constraint firstItem="FNW-DU-exU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="hCR-EH-GMo"/>
+                <constraint firstItem="Lgv-db-Hca" firstAttribute="trailing" secondItem="7or-6Q-P3c" secondAttribute="trailing" constant="-20" id="hPI-ad-vKA"/>
+                <constraint firstAttribute="bottom" secondItem="cAm-ft-Jom" secondAttribute="bottom" id="mIQ-hu-G8k"/>
+                <constraint firstItem="FNW-DU-exU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n3m-Xb-mKb"/>
+                <constraint firstItem="FNW-DU-exU" firstAttribute="bottom" secondItem="cAm-ft-Jom" secondAttribute="bottom" id="r0J-xK-3eX"/>
+                <constraint firstItem="cAm-ft-Jom" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="u5Z-3D-2SP"/>
+                <constraint firstItem="FNW-DU-exU" firstAttribute="top" secondItem="7or-6Q-P3c" secondAttribute="bottom" id="vnU-cL-xeb"/>
+                <constraint firstItem="Lgv-db-Hca" firstAttribute="top" secondItem="7or-6Q-P3c" secondAttribute="bottom" constant="20" id="wdQ-uM-xZ5"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="navigation-back-button.png" width="24" height="42"/>
+    </resources>
+</document>

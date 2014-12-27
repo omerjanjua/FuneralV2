@@ -1,0 +1,34 @@
+
+
+
+- changed Mantle imports from frameoworks to files
+
+
+if normal cell in cellforrowatindexpath do if (cell == nil) {
+if custom cell in viewdidload do UINib *nib = [UINib nibWithNibName:@"TodoListTableViewCell" bundle:nil]; register nib
+
+
+changed line 34 in IQBarButtonItem.m
+
+
+v3 - Ability to order flowers/products with My Details/ Condolence Message
+My Wishes - ability to submit data (tie in with My Details)
+
+
+- Product descriptions show text functions e.g. Bold <b> and break <br> could be cms issue. (See Ash Jewellery product in app)
+
+- No character limits on ‘My details’ and other menus e.g. phone numbers can have more than 11 digits, postcodes can have more than 7 characters
+
+When loading information, it needs sone kind of indicator
+
+double tap click thing
+
+autolayout outstanding
+DashboardViewController.xib
+MySavedDetailsViewController.xib
+CreateMyDetailsViewController.xib
+ProductsDetailedViewController.xib
+SideMenuViewController.xib
+TodoListViewController.xib
+MyWishListSavedViewController.xib
+CreateMyWishListViewController.xib

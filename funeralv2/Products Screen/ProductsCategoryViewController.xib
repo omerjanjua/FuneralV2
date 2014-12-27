@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductsCategoryViewController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController.navigationBarHidden" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="backButton" destination="hVt-oH-chU" id="bfF-Dc-h1H"/>
+                <outlet property="backgroundImageView" destination="ZjQ-DT-8lP" id="1Xx-4W-9rO"/>
+                <outlet property="tableView" destination="pxT-Qq-K5V" id="ZxM-wZ-66l"/>
+                <outlet property="titleLabel" destination="11E-HA-KHn" id="1SI-i4-flb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZjQ-DT-8lP">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCz-m0-ImS">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11E-HA-KHn">
+                            <rect key="frame" x="48" y="30" width="225" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" priority="999" constant="225" id="b6u-nT-4gF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVt-oH-chU">
+                            <rect key="frame" x="0.0" y="21" width="67" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="md2-CT-tGR"/>
+                                <constraint firstAttribute="width" constant="67" id="oeQ-nn-e5f"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="20" minY="9" maxX="35" maxY="10"/>
+                            <state key="normal" image="navigation-back-button.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="e4o-wi-NGJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="11E-HA-KHn" secondAttribute="bottom" constant="12" id="1FT-Oc-1dX"/>
+                        <constraint firstItem="hVt-oH-chU" firstAttribute="leading" secondItem="LCz-m0-ImS" secondAttribute="leading" id="5L4-zP-1QB"/>
+                        <constraint firstItem="11E-HA-KHn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LCz-m0-ImS" secondAttribute="top" constant="30" id="BPs-30-cMI"/>
+                        <constraint firstItem="11E-HA-KHn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LCz-m0-ImS" secondAttribute="leading" constant="48" id="Ivu-h0-kmL"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="11E-HA-KHn" secondAttribute="trailing" constant="47" id="MgG-fU-w1I"/>
+                        <constraint firstAttribute="trailing" secondItem="hVt-oH-chU" secondAttribute="trailing" constant="253" id="NCa-TD-f6d"/>
+                        <constraint firstAttribute="trailing" secondItem="11E-HA-KHn" secondAttribute="trailing" constant="47" id="Od3-fB-L30"/>
+                        <constraint firstAttribute="bottom" secondItem="hVt-oH-chU" secondAttribute="bottom" constant="3" id="T4y-F9-J0k"/>
+                        <constraint firstItem="hVt-oH-chU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LCz-m0-ImS" secondAttribute="top" constant="21" id="ZAW-LC-VtY"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hVt-oH-chU" secondAttribute="trailing" constant="253" id="dJL-p1-PRu"/>
+                        <constraint firstItem="11E-HA-KHn" firstAttribute="top" secondItem="LCz-m0-ImS" secondAttribute="top" constant="30" id="e0F-zS-EDT"/>
+                        <constraint firstItem="11E-HA-KHn" firstAttribute="leading" secondItem="LCz-m0-ImS" secondAttribute="leading" constant="48" id="ifP-fj-tJC"/>
+                        <constraint firstItem="hVt-oH-chU" firstAttribute="top" secondItem="LCz-m0-ImS" secondAttribute="top" constant="21" id="mkZ-fF-FzD"/>
+                        <constraint firstItem="hVt-oH-chU" firstAttribute="leading" secondItem="LCz-m0-ImS" secondAttribute="leading" id="sio-00-PPH"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hVt-oH-chU" secondAttribute="bottom" constant="3" id="uI4-ud-zB9"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="11E-HA-KHn" secondAttribute="bottom" constant="12" id="xSI-pk-SWY"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pxT-Qq-K5V">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="504" id="2zY-VF-eTl"/>
+                    </constraints>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Wj0-Ty-BQ9"/>
+                        <outlet property="delegate" destination="-1" id="tsX-E8-ver"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="pxT-Qq-K5V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="07E-oH-T3v"/>
+                <constraint firstItem="LCz-m0-ImS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Ql-eV-2fo"/>
+                <constraint firstAttribute="bottom" secondItem="ZjQ-DT-8lP" secondAttribute="bottom" id="8yt-z3-oOo"/>
+                <constraint firstItem="ZjQ-DT-8lP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DzX-et-dw4"/>
+                <constraint firstAttribute="bottom" secondItem="pxT-Qq-K5V" secondAttribute="bottom" id="QLQ-PF-v4h"/>
+                <constraint firstAttribute="trailing" secondItem="pxT-Qq-K5V" secondAttribute="trailing" id="TAn-Gp-Qab"/>
+                <constraint firstAttribute="trailing" secondItem="LCz-m0-ImS" secondAttribute="trailing" id="U3X-De-hzl"/>
+                <constraint firstItem="LCz-m0-ImS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="V7o-56-FgE"/>
+                <constraint firstItem="ZjQ-DT-8lP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cj8-LU-b8U"/>
+                <constraint firstAttribute="trailing" secondItem="ZjQ-DT-8lP" secondAttribute="trailing" id="udq-jX-owW"/>
+                <constraint firstItem="pxT-Qq-K5V" firstAttribute="top" secondItem="LCz-m0-ImS" secondAttribute="bottom" id="xZY-7L-1dE"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="background_image.png" width="640" height="1136"/>
+        <image name="navigation-back-button.png" width="24" height="42"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

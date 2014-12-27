@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ObituariesViewController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="navigationController.navigationBarHidden" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="backgroundImageView" destination="lhS-wM-Asg" id="0fQ-YT-FBV"/>
+                <outlet property="searchBar" destination="5ds-gx-1hX" id="qRc-iG-jxq"/>
+                <outlet property="searchDisplayController" destination="gUV-wz-DVM" id="hy4-BQ-GLl"/>
+                <outlet property="sideMenuButton" destination="AXx-fM-Agp" id="MiH-o3-t08"/>
+                <outlet property="tableView" destination="IDy-3Y-dFJ" id="l7E-7F-AQI"/>
+                <outlet property="titleLabel" destination="DDc-NA-hcu" id="KUm-bc-bzp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="lhS-wM-Asg">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ct7-e9-OL8">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXx-fM-Agp">
+                            <rect key="frame" x="0.0" y="21" width="67" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Atg-0s-k7n"/>
+                                <constraint firstAttribute="width" constant="67" id="Gpv-gX-CGy"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="18" minY="11" maxX="25" maxY="12"/>
+                            <state key="normal" image="navigation-menu-button.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="-1" eventType="touchUpInside" id="v5z-2w-Bhx"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obituaries" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDc-NA-hcu">
+                            <rect key="frame" x="48" y="30" width="225" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" priority="999" constant="225" id="2qv-hB-UgE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5ds-gx-1hX">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="qts-Op-XzZ"/>
+                            </constraints>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="1Jv-WG-r64"/>
+                            </connections>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="AXx-fM-Agp" secondAttribute="trailing" constant="253" id="7D5-wh-Zvh"/>
+                        <constraint firstItem="AXx-fM-Agp" firstAttribute="leading" secondItem="ct7-e9-OL8" secondAttribute="leading" id="B4e-Yn-XKn"/>
+                        <constraint firstItem="DDc-NA-hcu" firstAttribute="top" secondItem="ct7-e9-OL8" secondAttribute="top" constant="30" id="FPJ-ql-hS3"/>
+                        <constraint firstItem="5ds-gx-1hX" firstAttribute="top" secondItem="DDc-NA-hcu" secondAttribute="bottom" constant="12" id="LPA-DP-G4d"/>
+                        <constraint firstAttribute="trailing" secondItem="5ds-gx-1hX" secondAttribute="trailing" id="Mw6-gJ-lXc"/>
+                        <constraint firstAttribute="trailing" secondItem="DDc-NA-hcu" secondAttribute="trailing" constant="47" id="QkN-hU-YWc"/>
+                        <constraint firstItem="AXx-fM-Agp" firstAttribute="top" secondItem="ct7-e9-OL8" secondAttribute="top" constant="21" id="dSC-Ss-9aN"/>
+                        <constraint firstAttribute="bottom" secondItem="5ds-gx-1hX" secondAttribute="bottom" id="dnL-xh-MHo"/>
+                        <constraint firstItem="5ds-gx-1hX" firstAttribute="leading" secondItem="ct7-e9-OL8" secondAttribute="leading" id="oOi-xc-Tgb"/>
+                        <constraint firstItem="DDc-NA-hcu" firstAttribute="leading" secondItem="ct7-e9-OL8" secondAttribute="leading" constant="48" id="p6Y-2q-LEo"/>
+                        <constraint firstItem="5ds-gx-1hX" firstAttribute="top" secondItem="AXx-fM-Agp" secondAttribute="bottom" constant="3" id="z6Z-Hn-oSq"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IDy-3Y-dFJ">
+                    <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="460" id="d3x-2I-jlW"/>
+                    </constraints>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ewX-Kv-sLf"/>
+                        <outlet property="delegate" destination="-1" id="syv-Ti-wRl"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lhS-wM-Asg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8QE-nK-b0e"/>
+                <constraint firstItem="IDy-3Y-dFJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E9O-LP-Ul8"/>
+                <constraint firstAttribute="trailing" secondItem="lhS-wM-Asg" secondAttribute="trailing" id="I1n-2W-D6h"/>
+                <constraint firstItem="lhS-wM-Asg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IWi-1z-azf"/>
+                <constraint firstItem="ct7-e9-OL8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RUO-gz-iAG"/>
+                <constraint firstItem="IDy-3Y-dFJ" firstAttribute="top" secondItem="ct7-e9-OL8" secondAttribute="bottom" id="VCh-5B-n4o"/>
+                <constraint firstAttribute="bottom" secondItem="IDy-3Y-dFJ" secondAttribute="bottom" id="dnX-jw-vzE"/>
+                <constraint firstItem="ct7-e9-OL8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fKG-IW-YUP"/>
+                <constraint firstAttribute="trailing" secondItem="ct7-e9-OL8" secondAttribute="trailing" id="pHC-tC-BOP"/>
+                <constraint firstAttribute="trailing" secondItem="IDy-3Y-dFJ" secondAttribute="trailing" id="pRZ-Ec-NXn"/>
+                <constraint firstAttribute="bottom" secondItem="lhS-wM-Asg" secondAttribute="bottom" id="vZ0-Xq-dYv"/>
+            </constraints>
+            <point key="canvasLocation" x="221" y="201"/>
+        </view>
+        <searchDisplayController id="gUV-wz-DVM">
+            <connections>
+                <outlet property="delegate" destination="-1" id="gkE-6Y-wWc"/>
+                <outlet property="searchBar" destination="5ds-gx-1hX" id="t3j-GV-rn0"/>
+                <outlet property="searchContentsController" destination="-1" id="pZ3-x4-Qlx"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="JPG-FG-6ay"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="3TE-fK-9cw"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+    <resources>
+        <image name="background_image.png" width="640" height="1136"/>
+        <image name="navigation-menu-button.png" width="44" height="34"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
